@@ -562,12 +562,23 @@ img {
 }
 
 .wrapper--medium {
-        max-width: 900px;
+        max-width: 936px;
     }
 
 .wrapper .wrapper {
         padding-left: 0;
         padding-right: 0;
+    }
+
+.wrapper--b-margin {
+        margin-bottom: 1rem;
+    }
+
+@media (min-width: 530px) {
+
+.wrapper--b-margin {
+            margin-bottom: 3.872rem
+    }
     }
 
 .page-section {
@@ -655,9 +666,17 @@ img {
             float: left;
             width: 33.33%;
         }
+        
+        .row__medium-4-larger {
+            width: 37%;
+        }
     
         .row__medium-8 {
             float: left;
             width: 66.66%;
+        }
+        
+        .row__medium-8-smaller {
+            width: 63%;
         }
     }

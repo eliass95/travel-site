@@ -7,11 +7,19 @@
     margin-right: auto;
     
     &--medium {
-        max-width: 900px;
+        max-width: 936px;
     }
     
     .wrapper {
         padding-left: 0;
         padding-right: 0;
+    }
+    
+    &--b-margin {
+        margin-bottom: 1rem;
+        
+        @mixin atSmall {
+            margin-bottom: 3.872rem;   
+        }
     }
 }
