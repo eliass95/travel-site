@@ -20,10 +20,20 @@ gulp.task('watch', function(){
     watch('./app/assets/styles/**/*.css', function(){
         gulp.start('cssInject'); 
     });
+
+    // verifica altereção em qualquer arquivo js
+    watch('./app/assets/scripts/**/*.js', function(){
+        gulp.start('scriptsRefresh');
+    });
 });
 
-// injeta css novo na página após a execução da dependência styles.
+// executa task styles e injeta o novo css na página
 gulp.task('cssInject', ['styles'], function(){
     return gulp.src('./app/temp/styles/styles.css')
         .pipe(browserSync.stream()); // injeta css sem reload da página.
+});
+
+// executa task scripts e recarrega a página
+gulp.task('scriptsRefresh', ['scripts'], function(){
+    browserSync.reload();
 });
