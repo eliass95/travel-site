@@ -1170,6 +1170,10 @@ a {
     }
     }
 
+.site-header__menu-content--is-visible {
+            display: block;
+        }
+
 .primary-nav--pull-right {
         float: right;
     }
